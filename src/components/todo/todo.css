@@ -1,0 +1,47 @@
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 50px;
+  animation: todoApear .5s forwards;
+}
+
+.todo button {
+  cursor: pointer;
+  background-color: #dc3545;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: white;
+  position: absolute;
+  right: 0;
+}
+
+.todo h3 {
+  cursor: pointer;
+}
+
+.checked {
+  color: rgb(159, 159, 159);
+  position: relative;
+}
+
+.checked::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: rgb(159, 159, 159);
+}
+
+@keyframes todoApear {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 50px;
+  }
+}
